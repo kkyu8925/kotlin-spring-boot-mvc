@@ -5,7 +5,6 @@ import com.example.mvc.model.http.ErrorResponse
 import com.example.mvc.model.http.UserRequest
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.validation.BindingResult
 import org.springframework.validation.FieldError
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.MethodArgumentNotValidException
@@ -24,9 +23,10 @@ import javax.validation.constraints.Size
 class ExceptionApiController {
 
     @GetMapping("/hello")
-    fun hello(){
+    fun hello(): String {
         val list = mutableListOf<String>()
-        val temp = list[0]
+//        val temp = list[0]
+        return "hello"
     }
 
     @GetMapping("")
